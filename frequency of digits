@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DigitFrequency {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String num = sc.next();
+        sc.close();
+
+        int[] freq = new int[10]; // digits 0-9
+
+        for (int i = 0; i < num.length(); i++) {
+            int digit = num.charAt(i) - '0';
+            freq[digit]++;
+        }
+
+        for (int i = 0; i < 10; i++) {
+            if (freq[i] > 0) {
+                System.out.print(i + "→" + freq[i]);
+                if (i != 9) System.out.print(", ");
+            }
+        }
+    }
+}
