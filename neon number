@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class NeonNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+
+        int sum = 0, square = n * n;
+
+        while (square > 0) {
+            sum += square % 10;
+            square /= 10;
+        }
+
+        System.out.println(sum == n ? "Neon Number" : "Not Neon Number");
+    }
+}
