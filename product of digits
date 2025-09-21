@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ProductOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+
+        int product = 1;
+        int temp = n;
+
+        while (temp > 0) {
+            product *= temp % 10;
+            temp /= 10;
+        }
+
+        System.out.println(product);
+    }
+}
